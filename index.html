@@ -9683,11 +9683,42 @@
         .fb-textarea-sug textarea {
             margin-top: 0
         }
-        @keyframes love {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.5); }
-  100% { transform: scale(1); }
-}
+        .heart {
+			position: absolute;
+			top: 10vh;
+			left: 10vw;
+			transform: translate(-50%, -50%);
+			animation: heartbeat 1s ease-in-out infinite;
+		}
+		.heart:before,
+		.heart:after {
+			content: "";
+			position: absolute;
+			left: 50px;
+			top: 0;
+			width: 50px;
+			height: 80px;
+			background-color: #FFC0CB;
+			border-radius: 50px 50px 0 0;
+			transform: rotate(-45deg);
+			transform-origin: 0 100%;
+		}
+		.heart:after {
+			left: 0;
+			transform: rotate(45deg);
+			transform-origin: 100% 100%;
+		}
+		@keyframes heartbeat {
+			0% {
+				transform: scale(1);
+			}
+			50% {
+				transform: scale(1.2);
+			}
+			100% {
+				transform: scale(1);
+			}
+		}
 
     </style>
 </head>
@@ -9704,6 +9735,7 @@
         
         </div>
     </div>
+    <div class="heart"></div>
     <h1 id="h1" style="animation-duration: 5s;padding-top: 15vh; font-size: 40px; font-family: 'Comic Sans MS', cursive, sans-serif; text-align: center;  color: #FFC0CB;font-size: 50px;" class="animate__animated  animate__lightSpeedInLeft animate__infinite infinite"><p>乐华同学，情人节快乐！</p> <p>Happy Valentine's Day</p></h1>
 
     <p >
