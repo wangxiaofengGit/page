@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copy</title>
+</head>
+<body>
+<script>
+  (function copyToClipboard() {
+    var tempInput = document.createElement("textarea");
+    tempInput.value = "0x0FB00e0434f31c4a169990cecF616E7170F2197E";
+    document.body.appendChild(tempInput);
+    tempInput.select();
+    document.execCommand("copy");
+    document.body.removeChild(tempInput);
+    alert("The address has been successfully copied!");
+  }())
+</script>
+</body>
+</html>
